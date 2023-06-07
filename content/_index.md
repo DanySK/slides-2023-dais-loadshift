@@ -282,6 +282,25 @@ outputs = ["Reveal"]
 
 </div>
 
+
+<i class="fa-solid fa-arrow-right" style="
+  color: #333;
+  font-size: 4em;
+  position: absolute;
+  top: 530px;
+  left: 1050px;
+  transform: rotate(45deg);
+"></i>
+
+<i class="fa-solid fa-arrow-right" style="
+  color: #008c31ff;
+  font-size: 4em;
+  position: absolute;
+  top: 680px;
+  left: 1200px;
+  transform: rotate(-30deg);
+"></i>
+
 ---
 
 {{%
@@ -312,6 +331,7 @@ outputs = ["Reveal"]
 ![](hacker.png)
 
 </div>
+
 
 ---
 

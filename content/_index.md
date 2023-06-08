@@ -47,9 +47,15 @@ outputs = ["Reveal"]
 
 <div style="
   position: absolute;
-  top: 300px;
-  left: 600px;
-  width: 250px;
+<i class="fa-solid fa-arrow-right" style="
+  color: #333;
+  font-size: 5em;
+  position: absolute;
+  top: 400px;
+  left: 875px;
+  transform: rotate(20deg);
+"></i>
+
   height: 200px;
   border-radius: 40px;
   border: 5px solid #333;
@@ -282,23 +288,504 @@ outputs = ["Reveal"]
 
 </div>
 
+---
 
-<i class="fa-solid fa-arrow-right" style="
-  color: #333;
-  font-size: 4em;
-  position: absolute;
-  top: 530px;
-  left: 1050px;
-  transform: rotate(45deg);
-"></i>
+{{%
+    slide background-image="test.gif"
+    transition="fade"
+    preload="true"
+%}}
 
-<i class="fa-solid fa-arrow-right" style="
-  color: #008c31ff;
-  font-size: 4em;
+<div style="
   position: absolute;
-  top: 680px;
+  top: 50px;
+  left: -150px;
+  width: 1300px;
+  height: 800px;
+  border-radius: 40px;
+  border: 5px solid #333;
+  background: #008c3199;
+"></div>
+
+<div style="
+  position: absolute;
+  top: 570px;
+  left: 850px;
+  height: 800px;
+  width: 900px;
+">
+
+![](hacker.png)
+
+</div>
+
+<div style="
+  position: absolute;
+  top: 600px;
+  left: 1130px;
+  height: 100px;
+  width: 100px;
+">
+
+![](hamster.gif)
+
+</div>
+
+---
+
+{{%
+    slide background-image="test.gif"
+    transition="fade"
+    preload="true"
+%}}
+
+<div style="
+  position: absolute;
+  top: 50px;
+  left: -150px;
+  width: 1300px;
+  height: 800px;
+  border-radius: 40px;
+  border: 5px solid #333;
+  background: #008c3199;
+"></div>
+
+<div style="
+  position: absolute;
+  top: 570px;
+  left: 850px;
+  height: 800px;
+  width: 900px;
+">
+
+![](hacker.png)
+
+</div>
+
+<div style="
+  position: absolute;
+  top: 600px;
+  left: 1130px;
+  height: 100px;
+  width: 100px;
+">
+
+![](hamster.gif)
+
+</div>
+
+<div style="
+  position: absolute;
+  top: 590px;
+  left: 1340px;
+  height: 180px;
+  width: 180px;
+">
+
+![](money.gif)
+
+</div>
+
+---
+
+{{%
+    slide background-image="test.gif"
+    transition="fade"
+    preload="true"
+%}}
+
+<div style="
+  position: absolute;
+  top: 50px;
+  left: -150px;
+  width: 1300px;
+  height: 800px;
+  border-radius: 40px;
+  border: 5px solid #333;
+  background: #008c3199;
+"></div>
+
+<div style="
+  position: absolute;
+  top: 570px;
+  left: 850px;
+  height: 800px;
+  width: 900px;
+">
+
+![](hacker.png)
+
+</div>
+
+<div style="
+  position: absolute;
+  top: 0px;
   left: 1200px;
-  transform: rotate(-30deg);
+  width: 200px;
+  height: 150px;
+  border-radius: 40px;
+">
+
+![](pip-boy-happy.png)
+
+</div>
+
+---
+
+{{%
+    slide background-image="test.gif"
+    transition="fade"
+    preload="true"
+%}}
+
+<div style="
+  position: absolute;
+  top: 50px;
+  left: -150px;
+  width: 1300px;
+  height: 800px;
+  border-radius: 40px;
+  border: 5px solid #333;
+  background: #008c3199;
+"></div>
+
+<div style="
+  position: absolute;
+  top: 570px;
+  left: 850px;
+  height: 800px;
+  width: 900px;
+">
+
+![](hacker.png)
+
+</div>
+
+<div style="
+  position: absolute;
+  top: 0px;
+  left: 1200px;
+  width: 200px;
+  height: 150px;
+  border-radius: 40px;
+">
+
+![](pip-boy-happy.png)
+
+</div>
+
+<div style="
+  position: absolute;
+  top: 280px;
+  left: 1350px;
+  width: 200px;
+  height: 150px;
+  border-radius: 40px;
+  border: 5px solid #333;
+  background: #008c3199;
+"></div>
+
+---
+
+{{%
+    slide background-image="test.gif"
+    transition="fade"
+    preload="true"
+%}}
+
+<div style="
+  position: absolute;
+  top: 50px;
+  left: -150px;
+  width: 1300px;
+  height: 800px;
+  border-radius: 40px;
+  border: 5px solid #333;
+  background: #008c3199;
+"></div>
+
+<div style="
+  position: absolute;
+  top: 570px;
+  left: 850px;
+  height: 800px;
+  width: 900px;
+">
+
+![](hacker.png)
+
+</div>
+
+<div style="
+  position: absolute;
+  top: 0px;
+  left: 1200px;
+  width: 200px;
+  height: 150px;
+  border-radius: 40px;
+">
+
+![](pip-boy-happy.png)
+
+</div>
+
+<div style="
+  position: absolute;
+  top: 65px;
+  left: 1320px;
+  width: 200px;
+  height: 200px;
+  border-radius: 40px;
+  transform: rotate(-90deg)
+">
+
+![](full.png)
+
+</div>
+
+<div style="
+  position: absolute;
+  top: 280px;
+  left: 1350px;
+  width: 200px;
+  height: 150px;
+  border-radius: 40px;
+  border: 5px solid #333;
+  background: #008c3199;
+"></div>
+
+<div style="
+  position: absolute;
+  top: 110px;
+  left: 1270px;
+  height: 70px;
+  width: 70px;
+">
+
+![](hamster.gif)
+
+</div>
+
+---
+
+{{%
+    slide background-image="test.gif"
+    transition="fade"
+    preload="true"
+%}}
+
+<div style="
+  position: absolute;
+  top: 50px;
+  left: -150px;
+  width: 1300px;
+  height: 800px;
+  border-radius: 40px;
+  border: 5px solid #333;
+  background: #008c3199;
+"></div>
+
+<div style="
+  position: absolute;
+  top: 570px;
+  left: 850px;
+  height: 800px;
+  width: 900px;
+">
+
+![](hacker.png)
+
+</div>
+
+<div style="
+  position: absolute;
+  top: 0px;
+  left: 1200px;
+  width: 200px;
+  height: 150px;
+  border-radius: 40px;
+">
+
+![](pip-boy-happy.png)
+
+</div>
+
+<div style="
+  position: absolute;
+  top: 65px;
+  left: 1320px;
+  width: 200px;
+  height: 200px;
+  border-radius: 40px;
+  transform: rotate(-90deg)
+">
+
+![](full.png)
+
+</div>
+
+
+<div style="
+  position: absolute;
+  top: 110px;
+  left: 1270px;
+  height: 70px;
+  width: 70px;
+">
+
+![](hamster.gif)
+
+</div>
+
+---
+
+{{%
+    slide background-image="test.gif"
+    transition="fade"
+    preload="true"
+%}}
+
+<div style="
+  position: absolute;
+  top: 50px;
+  left: -150px;
+  width: 1300px;
+  height: 800px;
+  border-radius: 40px;
+  border: 5px solid #333;
+  background: #008c3199;
+"></div>
+
+<div style="
+  position: absolute;
+  top: 570px;
+  left: 850px;
+  height: 800px;
+  width: 900px;
+">
+
+![](hacker.png)
+
+</div>
+
+<div style="
+  position: absolute;
+  top: 0px;
+  left: 1200px;
+  width: 200px;
+  height: 150px;
+  border-radius: 40px;
+">
+
+![](pip-boy-happy.png)
+
+</div>
+
+<div style="
+  position: absolute;
+  top: 65px;
+  left: 1320px;
+  width: 200px;
+  height: 200px;
+  border-radius: 40px;
+  transform: rotate(-90deg)
+">
+
+![](low.png)
+
+</div>
+
+<div style="
+  position: absolute;
+  top: 110px;
+  left: 1270px;
+  height: 70px;
+  width: 70px;
+">
+
+![](hamster.gif)
+
+</div>
+
+---
+
+
+
+{{%
+    slide background-image="test.gif"
+    transition="fade"
+    preload="true"
+%}}
+
+<div style="
+  position: absolute;
+  top: 50px;
+  left: -150px;
+  width: 1300px;
+  height: 800px;
+  border-radius: 40px;
+  border: 5px solid #333;
+  background: #008c3199;
+"></div>
+
+<div style="
+  position: absolute;
+  top: 570px;
+  left: 850px;
+  height: 800px;
+  width: 900px;
+">
+
+![](hacker.png)
+
+</div>
+
+<div style="
+  position: absolute;
+  top: 0px;
+  left: 1200px;
+  width: 200px;
+  height: 150px;
+  border-radius: 40px;
+">
+
+![](pip-boy-happy.png)
+
+</div>
+
+<div style="
+  position: absolute;
+  top: 65px;
+  left: 1320px;
+  width: 200px;
+  height: 200px;
+  border-radius: 40px;
+  transform: rotate(-90deg)
+">
+
+![](low.png)
+
+</div>
+
+<div style="
+  position: absolute;
+  top: 110px;
+  left: 1270px;
+  height: 70px;
+  width: 70px;
+">
+
+![](hamster.gif)
+
+</div>
+
+<i class="fa-solid fa-arrow-down" style="
+  color: #333;
+  font-size: 8em;
+  position: absolute;
+  top: 300px;
+  left: 1200px;
+  transform: rotate(10deg);
 "></i>
 
 ---
@@ -332,6 +819,54 @@ outputs = ["Reveal"]
 
 </div>
 
+<div style="
+  position: absolute;
+  top: 0px;
+  left: 1200px;
+  width: 200px;
+  height: 150px;
+  border-radius: 40px;
+">
+
+![](pip-boy-happy.png)
+
+</div>
+
+<div style="
+  position: absolute;
+  top: 65px;
+  left: 1320px;
+  width: 200px;
+  height: 200px;
+  border-radius: 40px;
+  transform: rotate(-90deg)
+">
+
+![](low.png)
+
+</div>
+
+<i class="fa-solid fa-arrow-down" style="
+  color: #333;
+  font-size: 8em;
+  position: absolute;
+  top: 300px;
+  left: 1200px;
+  transform: rotate(10deg);
+"></i>
+
+
+<div style="
+  position: absolute;
+  top: 600px;
+  left: 1130px;
+  height: 100px;
+  width: 100px;
+">
+
+![](hamster.gif)
+
+</div>
 
 ---
 
@@ -361,6 +896,102 @@ outputs = ["Reveal"]
 ">
 
 ![](hacker.png)
+
+</div>
+
+<div style="
+  position: absolute;
+  top: 0px;
+  left: 1200px;
+  width: 200px;
+  height: 150px;
+  border-radius: 40px;
+">
+
+![](pip-boy-happy.png)
+
+</div>
+
+<div style="
+  position: absolute;
+  top: 65px;
+  left: 1320px;
+  width: 200px;
+  height: 200px;
+  border-radius: 40px;
+  transform: rotate(-90deg)
+">
+
+![](low.png)
+
+</div>
+
+<i class="fa-solid fa-arrows-up-down" style="
+  color: #333;
+  font-size: 8em;
+  position: absolute;
+  top: 300px;
+  left: 1200px;
+  transform: rotate(10deg);
+"></i>
+
+
+<div style="
+  position: absolute;
+  top: 600px;
+  left: 1130px;
+  height: 100px;
+  width: 100px;
+">
+
+![](hamster.gif)
+
+</div>
+
+---
+
+## Summarizing
+
+---
+
+{{%
+    slide background-image="test.gif"
+    transition="fade"
+    preload="true"
+%}}
+
+<div style="
+  position: absolute;
+  top: 50px;
+  left: -150px;
+  width: 1300px;
+  height: 800px;
+  border-radius: 40px;
+  border: 5px solid #333;
+  background: #008c3199;
+"></div>
+
+<div style="
+  position: absolute;
+  top: 570px;
+  left: 850px;
+  height: 800px;
+  width: 900px;
+">
+
+![](hacker.png)
+
+</div>
+
+<div style="
+  position: absolute;
+  top: 600px;
+  left: 1130px;
+  height: 100px;
+  width: 100px;
+">
+
+![](hamster.gif)
 
 </div>
 

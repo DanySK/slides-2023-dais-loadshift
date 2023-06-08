@@ -15,19 +15,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  actions: none
-  checks: none
   contents: write
-  deployments: none
-  id-token: none
-  issues: none
-  discussions: none
-  packages: none
-  pages: none
-  pull-requests: none
-  repository-projects: none
-  security-events: none
-  statuses: none
 
 jobs:
   Build-Slides:
@@ -67,6 +55,12 @@ jobs:
       #   with:
       #     NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
       #     SSH_PASS: ${{ secrets.SSH_PASS }}
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1.150.0
+        with:
+          working-directory: shared-slides
+      - name: Run the preprocessor
+        run: shared-slides/preprocess.rb
       - name: Build slides with hugo
         run: hugo
       - name: Transform and Inline Mermaid charts

@@ -950,64 +950,23 @@ outputs = ["Reveal"]
 
 ---
 
-## Summarizing
 
----
 
 {{%
-    slide background-image="test.gif"
-    transition="fade"
+    slide background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png"
+    transition="slide"
     preload="true"
 %}}
 
-<div style="
-  position: absolute;
-  top: 50px;
-  left: -150px;
-  width: 1300px;
-  height: 800px;
-  border-radius: 40px;
-  border: 5px solid #333;
-  background: #008c3199;
-"></div>
+## Summary
 
-<div style="
-  position: absolute;
-  top: 570px;
-  left: 850px;
-  height: 800px;
-  width: 900px;
-">
+* Controlling and monitoring *large situated systems* can be computationally expensive
+* *Heterogeneity* of devices impact both controllee and controller
+* Heavy workloads impact negatively on *performance* and *battery life*
+* *Scaling up* is not always possible
+  * And even when possible, it is often *expensive*
 
-![](hacker.png)
-
-</div>
-
-<div style="
-  position: absolute;
-  top: 600px;
-  left: 1130px;
-  height: 100px;
-  width: 100px;
-">
-
-![](hamster.gif)
-
-</div>
-
----
-
-## Problem: centralized monitoring of a distributed system
-
-* image with a dense network (possibly multilevel)
-* image of the same network with an observer/administrator
-* image of the network with observer observing the whole system
-* show a complex rendering on the observer machine
-* maybe snapshots from alchemist, with effects. Idea: the realtime controller can be very expensive
-* change the monitoring device to a smartphone
-* but modern smartphones are powerful, they can render: drain the battery
-* state the general problem: the heavy-load part should be moved to the ECC or to the end device at *runtime*
-* enough power/battery? render locally. Not enough? Render elsewhere and send a video, send commands away
+#### Instead of scaling, we want to **shift** the load at **runtime**, depending on the context!
 
 ---
 

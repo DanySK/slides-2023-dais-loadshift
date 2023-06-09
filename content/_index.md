@@ -93,10 +93,10 @@ outputs = ["Reveal"]
 
 <div style="
   position: absolute;
-  top: 50px;
-  left: -150px;
-  width: 1300px;
-  height: 800px;
+  top: 75px;
+  left: -50px;
+  width: 1200px;
+  height: 750px;
   border-radius: 40px;
   border: 5px solid #333;
   background: #008c3199;
@@ -134,10 +134,10 @@ outputs = ["Reveal"]
 
 <div style="
   position: absolute;
-  top: 50px;
-  left: -150px;
-  width: 1300px;
-  height: 800px;
+  top: 75px;
+  left: -50px;
+  width: 1200px;
+  height: 750px;
   border-radius: 40px;
   border: 5px solid #333;
   background: #008c3199;
@@ -199,10 +199,10 @@ outputs = ["Reveal"]
 
 <div style="
   position: absolute;
-  top: 50px;
-  left: -150px;
-  width: 1300px;
-  height: 800px;
+  top: 75px;
+  left: -50px;
+  width: 1200px;
+  height: 750px;
   border-radius: 40px;
   border: 5px solid #333;
   background: #008c3199;
@@ -267,10 +267,10 @@ outputs = ["Reveal"]
 
 <div style="
   position: absolute;
-  top: 50px;
-  left: -150px;
-  width: 1300px;
-  height: 800px;
+  top: 75px;
+  left: -50px;
+  width: 1200px;
+  height: 750px;
   border-radius: 40px;
   border: 5px solid #333;
   background: #008c3199;
@@ -298,10 +298,10 @@ outputs = ["Reveal"]
 
 <div style="
   position: absolute;
-  top: 50px;
-  left: -150px;
-  width: 1300px;
-  height: 800px;
+  top: 75px;
+  left: -50px;
+  width: 1200px;
+  height: 750px;
   border-radius: 40px;
   border: 5px solid #333;
   background: #008c3199;
@@ -341,10 +341,10 @@ outputs = ["Reveal"]
 
 <div style="
   position: absolute;
-  top: 50px;
-  left: -150px;
-  width: 1300px;
-  height: 800px;
+  top: 75px;
+  left: -50px;
+  width: 1200px;
+  height: 750px;
   border-radius: 40px;
   border: 5px solid #333;
   background: #008c3199;
@@ -396,10 +396,10 @@ outputs = ["Reveal"]
 
 <div style="
   position: absolute;
-  top: 50px;
-  left: -150px;
-  width: 1300px;
-  height: 800px;
+  top: 75px;
+  left: -50px;
+  width: 1200px;
+  height: 750px;
   border-radius: 40px;
   border: 5px solid #333;
   background: #008c3199;
@@ -440,10 +440,10 @@ outputs = ["Reveal"]
 
 <div style="
   position: absolute;
-  top: 50px;
-  left: -150px;
-  width: 1300px;
-  height: 800px;
+  top: 75px;
+  left: -50px;
+  width: 1200px;
+  height: 750px;
   border-radius: 40px;
   border: 5px solid #333;
   background: #008c3199;
@@ -477,7 +477,7 @@ outputs = ["Reveal"]
 <div style="
   position: absolute;
   top: 280px;
-  left: 1350px;
+  left: 1270px;
   width: 200px;
   height: 150px;
   border-radius: 40px;
@@ -495,10 +495,10 @@ outputs = ["Reveal"]
 
 <div style="
   position: absolute;
-  top: 50px;
-  left: -150px;
-  width: 1300px;
-  height: 800px;
+  top: 75px;
+  left: -50px;
+  width: 1200px;
+  height: 750px;
   border-radius: 40px;
   border: 5px solid #333;
   background: #008c3199;
@@ -546,7 +546,7 @@ outputs = ["Reveal"]
 <div style="
   position: absolute;
   top: 280px;
-  left: 1350px;
+  left: 1270px;
   width: 200px;
   height: 150px;
   border-radius: 40px;
@@ -576,10 +576,10 @@ outputs = ["Reveal"]
 
 <div style="
   position: absolute;
-  top: 50px;
-  left: -150px;
-  width: 1300px;
-  height: 800px;
+  top: 75px;
+  left: -50px;
+  width: 1200px;
+  height: 750px;
   border-radius: 40px;
   border: 5px solid #333;
   background: #008c3199;
@@ -647,10 +647,10 @@ outputs = ["Reveal"]
 
 <div style="
   position: absolute;
-  top: 50px;
-  left: -150px;
-  width: 1300px;
-  height: 800px;
+  top: 75px;
+  left: -50px;
+  width: 1200px;
+  height: 750px;
   border-radius: 40px;
   border: 5px solid #333;
   background: #008c3199;
@@ -709,8 +709,6 @@ outputs = ["Reveal"]
 
 ---
 
-
-
 {{%
     slide background-image="test.gif"
     transition="fade"
@@ -719,10 +717,10 @@ outputs = ["Reveal"]
 
 <div style="
   position: absolute;
-  top: 50px;
-  left: -150px;
-  width: 1300px;
-  height: 800px;
+  top: 75px;
+  left: -50px;
+  width: 1200px;
+  height: 750px;
   border-radius: 40px;
   border: 5px solid #333;
   background: #008c3199;
@@ -798,10 +796,10 @@ outputs = ["Reveal"]
 
 <div style="
   position: absolute;
-  top: 50px;
-  left: -150px;
-  width: 1300px;
-  height: 800px;
+  top: 75px;
+  left: -50px;
+  width: 1200px;
+  height: 750px;
   border-radius: 40px;
   border: 5px solid #333;
   background: #008c3199;
@@ -878,10 +876,10 @@ outputs = ["Reveal"]
 
 <div style="
   position: absolute;
-  top: 50px;
-  left: -150px;
-  width: 1300px;
-  height: 800px;
+  top: 75px;
+  left: -50px;
+  width: 1200px;
+  height: 750px;
   border-radius: 40px;
   border: 5px solid #333;
   background: #008c3199;
@@ -962,11 +960,13 @@ outputs = ["Reveal"]
 
 * Controlling and monitoring *large situated systems* can be computationally expensive
 * *Heterogeneity* of devices impact both controllee and controller
+  * Workloads should be able to run on *very different runtimes and hardware*
 * Heavy workloads impact negatively on *performance* and *battery life*
 * *Scaling up* is not always possible
   * And even when possible, it is often *expensive*
 
-#### Instead of scaling, we want to **shift** the load at **runtime**, depending on the context!
+
+#### Instead of scaling, we want to **shift** the load at **runtime**, depending on the context, and **across different runtimes**!
 
 ---
 
@@ -978,4 +978,213 @@ outputs = ["Reveal"]
 
 ## Analogies
 
-Unsurprisingly, the problem exists in industry as well (videogames)
+### Load balancing in cloud systems
+
+Tasks *allocated* to the available compute resources to optimise the performance
+
+It does not account for transferring load across **heterogeneous** devices:
+wordloads made for the cloud remain in the cloud
+
+#### Workloads must *move across the whole edge-cloud continuum*
+
+---
+
+{{%
+    slide background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png"
+    transition="slide"
+    preload="true"
+%}}
+
+## Analogies
+
+### Mobile code and mobile agents
+
+Workloads are *modeled* as *autonomous software entities* which can move across the network
+
+Typically, however, they require **specific runtimes** to be executed
+
+Mobile agents designed for the Java Virtual Machine do not run in a browser or in a microcontroller
+
+#### Workloads must *move across different runtimes*
+
+---
+
+{{%
+    slide background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png"
+    transition="slide"
+    preload="true"
+%}}
+
+## Analogies
+
+### Gaming industry
+
+"AAA" Games are very resource-intensive and require expensive hardware:
+several players are thus offering *cloud gaming* services.
+
+Idea: *stream* the game to the player, and *stream back* the input
+(e.g., <i class="fa-brands fa-google"></i> Stadia, <i class="fa-brands fa-microsoft"></i> xCloud, <i class="fa-brands fa-amazon"></i> Luna, nVidia GeForce Now...).
+The same workload can thus, in principle, run in the cloud or on the end device.
+
+Moreover,
+some games have been demonstrated to run inside a web browser:
+porting on *different runtimes* is possible in principle
+(e.g., Quake JS).
+
+Games, however, **do not move** across runtimes, they are entirely different applications that need to be **manually restarted**.
+
+Also, versions targeting different runtimes are typically **reimplementations** (costly realization and maintenance).
+
+#### Workloads must *move transparently to the user* and have *cheap realization and maintenance*
+
+---
+
+{{%
+    slide background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png"
+    transition="slide"
+    preload="true"
+%}}
+
+## Abstract architecture
+
+![abstract architecture](architecture.svg)
+
+*Far Endpoint* **$\mathcal{F}$** -- software component, usually *non-local*, that provides
+means to perform the primary operations required on the target system
+through a *well-defined API*;
+
+*Near Endpoint* **$\mathcal{N}$** -- software component *the user interacts directly with*,
+hence, running *on a device the user has direct access to*, whose goal is to
+interact with the Far Endpoint;
+
+*Common Data Model* **$\mathcal{M}$** -- a *formal* (and *serialisable*) description of
+the *data exchanged* among all the components of the system;
+
+*Heavy-duty Executor* **$\mathcal{H}$** --
+software module performing
+*resource-intensive computational tasks*;
+this is the component that _can be executed and moved on either **$\mathcal{F}$** or **$\mathcal{N}$**_
+
+<img src="hamster.gif" alt="hamster" style="width: 100px; height: 100px; margin: 0 0 0 0; position: absolute; top: 610px; left: -90px"/>
+<img src="hamster.gif" alt="hamster" style="width: 100px; height: 100px; margin: 0 0 0 0; position: absolute; top: 610px; left: 1430px"/>
+
+---
+
+{{%
+    slide background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png"
+    transition="slide"
+    preload="true"
+%}}
+
+## Key idea
+
+![abstract architecture](architecture.svg)
+
+* *Isolate* **$\mathcal{H}$** from the rest of the system;
+* *Encapsulate* the data model in a *serialisable* shared format **$\mathcal{M}$**;
+* *Mediate* all $\mathcal{N} \rightleftarrows{} \mathcal{F}$ interactions through **$\mathcal{H}$** leveraging **$\mathcal{M}$**
+  * $\mathcal{N} \rightleftarrows{} \mathcal{M} \rightleftarrows{} \mathcal{H} \rightleftarrows{} \mathcal{M} \rightleftarrows{} \mathcal{F}$;
+
+In short, the architecture struggles to *isolate* and *minimize* the part of code that needs to be *moved*.
+
+#### Practical problem: how to *move* **$\mathcal{H}$** across *different runtimes*?
+
+---
+
+{{%
+    slide background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png"
+    transition="slide"
+    preload="true"
+%}}
+
+## Moving code around: strategies
+
+#### **Copy and enable**
+* every devices has a *dormant instance* of **$\mathcal{H}$**
+* only *one copy* of **$\mathcal{H}$** can be *active at a time*
+* requires **$\mathcal{H}$** to be *stateless*
+  * all state must be serializable and embedded into **$\mathcal{M}$**
+* Relatively *straightforward* to implement when **$\mathcal{H}$** natively has little or no state
+* Better *reactivity* as only commands and state travel over the network
+* *Wastes resources* to keep a copy of **$\mathcal{H}$** on all devices
+
+#### **Mobile code**
+* **$\mathcal{H}$** gets serialized and sent over the network
+* *Better flexibility* as state and behaviour move together
+* A single shared copy potentially enables *runtime update injection*
+  * How to preserve the integrity of the ongoing operation is an open problem though
+* *Harder to implement*
+* Potentially *inferior reactivity* as only commands and state travel over the network
+* *Wastes resources* to keep a copy of **$\mathcal{H}$** on all devices
+
+---
+
+{{%
+    slide background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png"
+    transition="slide"
+    preload="true"
+%}}
+
+## Portability
+
+**$\mathcal{H}$** must be able to run as a module of **$\mathcal{N}$** and **$\mathcal{F}$**<br>
+but *we did not impose any constraint on the runtime or technology*
+
+### Shared technology/runtime
+* **$\mathcal{N}$** and **$\mathcal{F}$** *share a runtime*
+  * they can be written in *different languages* as far as their *executable* form is *portable*
+* The proposed architecture is a *complicating overkill* in this case
+  * Many ready-to-use solutions from the literature
+
+### Incompatible runtimes
+
+* **$\mathcal{N}$** and **$\mathcal{F}$** are based on *incompatible runtimes* (e.g., **$\mathcal{F}$** runs in the JVM, **$\mathcal{N}$** in the browser)
+* Two macro-strategies:
+  * *Porting* **$\mathcal{H}$** to each runtime
+  * *Multi-targeting* **$\mathcal{H}$** to multiple runtimes
+
+---
+
+{{%
+    slide background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png"
+    transition="slide"
+    preload="true"
+%}}
+
+## Porting
+
+*Rewrite* the *whole application* for *each runtime*
+
+* *Expensive* and *error-prone*
+* *Hard to maintain* as the code base is *duplicated* and avoiding *divergence* is a hard problem
+
+* Adopted in some notable cases, e.g., ioquake 3 is a *port* of Quake 3 Arena to the browser
+with the entire code base rewritten from C++ to JavaScript
+
+<img src="https://global.discourse-cdn.com/standard14/uploads/ioquake/original/1X/9f34c23d7f1e457ea07f366b194e73792b0f45cd.jpeg" width="500" >
+
+(notably, the last stable version of the original id Tech 3 engine has been released in 2005)
+
+---
+
+{{%
+    slide background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png"
+    transition="slide"
+    preload="true"
+%}}
+
+## Multi-targeting
+
+*Offload* the task to generate executables for multiple runtimes to a *multi-target build process* generating *multiple executables*
+
+* *Simple* at least on paper
+* *Limited choice of technologies*
+  * The more the target runtimes, the fewer the available technologies
+* No shared runtime $\Rightarrow$ *No shared libraries!*
+  * Host language and tooling must provide ways to abstract over the differences and pick the right one
+
+### Notable platforms
+
+* *LLVM*
+* *Kotlin*
+* *Scala*

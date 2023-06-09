@@ -51,7 +51,7 @@ $linkColorHover: lighten( $linkColor, 25% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
 
 $heading1Size: 2.5em;
-$heading2Size: 1.6em;
+$heading2Size: 2em;
 $heading3Size: 1.3em;
 $heading4Size: 1.0em;
 
@@ -70,12 +70,12 @@ section.has-light-background {
 .reveal strong,
 .reveal b {
 	font-weight: bold;
-	color: #b81f0b
+	color: #e55744
 }
 
 .reveal em {
 	font-style: italic;
-	color: #039418
+	color: #3bce51
 }
 
 .reveal section img {
@@ -101,8 +101,12 @@ section.has-light-background {
 	margin: .5em 0 0;
 }
 
+.reveal h4 {
+	margin: .5em 0 0;
+}
+
 .reveal ul {
-	margin: .2em .2em .2em;
+	margin: 0em .1em .1em .1em;
 }
 
 .gist-it-gist .gist-file .gist-data pre, .gister-gist .gist-file .gist-data pre {

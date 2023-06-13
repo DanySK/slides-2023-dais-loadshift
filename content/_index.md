@@ -1187,6 +1187,138 @@ with the entire code base rewritten from C++ to JavaScript
 
 ### Notable platforms
 
-* *LLVM*
-* *Kotlin*
-* *Scala*
+* *Scala* -- through *Scala.js* and *Scala/Native*
+* *Kotlin* -- *integrated* multi-targeting for Javascript, JVM
+  * Arguably, more solid toolchain
+
+---
+
+{{%
+    slide background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png"
+    transition="slide"
+    preload="true"
+%}}
+
+## Proof of concept
+
+### Showcase requirements
+* Use *incompatible platforms* for **$\mathcal{N}$** and **$\mathcal{F}$**
+* Emulate multiple devices and networked (non-trivial **$\mathcal{H}$**)
+* Non-trivial workload moving across the incompatible platforms
+
+### Nice to have
+* Software architecture allowing to *reuse* as much code as possible
+* Large enough to make porting unfeasible
+
+---
+
+{{%
+    slide background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png"
+    transition="slide"
+    preload="true"
+%}}
+
+## Proof of concept: target
+
+### <img src="https://alchemistsimulator.github.io/images/logo.svg" alt="logo" width="33px" height="0px" style="margin: 0 0 0 0;"/> [Alchemist](https://alchemistsimulator.github.io/)
+
+<video loop="" playsinline="" autoplay="" muted="" style="max-width: 100%; display: inline-block; ">
+  <source src="https://alchemistsimulator.github.io/home-animation.mp4" type="video/mp4">
+  If your browser supported the video tag, there would be a nice video.
+</video>
+
+* Simulator for *large-scale distributed systems*
+  * Also presented in a [DAIS tutorial](https://link.springer.com/chapter/10.1007/978-3-030-78198-9_10) in 2021
+* <i class="fa-brands fa-java"></i> JVM-based (written in Java, Kotlin, and Scala)
+
+---
+
+{{%
+    slide background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png"
+    transition="slide"
+    preload="true"
+%}}
+
+## Proof of concept: architecture
+
+![POC architecture](proof.svg)
+
+| **Logical Component** | **Alchemist Component** | **Platform** |
+| --- | --- | --- |
+| **$\mathcal{M}$** | Simulator Model + *New serialization surrogates* | <i class="fa-brands fa-java"></i> and <i class="fa-brands fa-square-js"></i> |
+| **$\mathcal{F}$** | Simulator Engine + *New server module* | <i class="fa-brands fa-java"></i> |
+| **$\mathcal{N}$** | Browser | <i class="fa-brands fa-square-js"></i> |
+| **$\mathcal{H}$** | *New rendering system* | <i class="fa-brands fa-java"></i> and <i class="fa-brands fa-square-js"></i> |
+
+
+---
+
+{{%
+    slide background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png"
+    transition="slide"
+    preload="true"
+%}}
+
+## Proof of concept: design
+
+![POC architecture](component.svg)
+
+
+---
+
+{{%
+    slide background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png"
+    transition="slide"
+    preload="true"
+%}}
+
+## Proof of concept: demo
+
+
+### `curl -sL https://bit.ly/dais-2023-loadshift | bash `
+
+![running on N](client-snapshot.png)
+![running on F](server-snapshot.png)
+
+Feel free to try it yourself :)
+
+Requirements: Java 8+, Internet connection, a browser, `curl`, and `bash`
+
+---
+
+{{%
+    slide background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png"
+    transition="slide"
+    preload="true"
+%}}
+
+## Proof of concept: performance analysis
+
+![total time](3.pdf.svg)
+![serialization time](0.pdf.svg)
+![rendering time](2.pdf.svg)
+![deserialization time](1.pdf.svg)
+
+---
+
+{{%
+    slide background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png"
+    transition="slide"
+    preload="true"
+%}}
+
+## Conclusion
+* A *novel architecture* for *moving workloads across heterogeneous runtimes*
+  1. Isolate the heavy load part
+  2. Identify the shared model and make it serializable
+  3. Mediate all interactions through the heavy load part and the shared model
+  4. Either write multiple ports of the heavy load, or **much better**, use a multi-target build process
+* The *Proof of concept* demonstrates feasibility
+* The *Performance Analysis* suggests potentials benefits for heterogenuous systems and evolving contexts
+
+#
+#
+## Future work
+* PoC integrated in the simulator, but *way* more work is needed to make it *usable*
+* Investigation of *autonomic dynamic load shift strategies*
+

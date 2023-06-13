@@ -9,11 +9,62 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="/slides-2023-dais-loadshift/reveal-js/dist/reset.css">
 <link rel="stylesheet" href="/slides-2023-dais-loadshift/reveal-js/dist/reveal.css">
   <link rel="stylesheet" href="/slides-2023-dais-loadshift/css/custom-theme.min.3e2361a0514d3c5ab5bb5b17fb4badac19d01009d92bdab68b75ca4b6577b8cc.css" id="theme"><link rel="stylesheet" href="/slides-2023-dais-loadshift/highlight-js/solarized-dark.min.css">
-<link rel="stylesheet" href="https://gitcdn.link/repo/DanySK/css-blur-animation/master/blur.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto Mono" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Oxygen Mono" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Ubuntu Mono" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        animateDiv($('.traveling'));
+    });
+
+    function makeNewPosition($container) {
+
+        
+        var h = $container.height() - 50;
+        var w = $container.width() - 50;
+
+        var nh = Math.floor(Math.random() * h);
+        var nw = Math.floor(Math.random() * w);
+
+        return [nh, nw];
+
+    }
+
+    function animateDiv($target) {
+        var newq = makeNewPosition($target.parent());
+        var oldq = $target.offset();
+        console.log("new " + newq);
+        console.log("old " + oldq.top + " " + oldq.left);
+        console.log($target)
+        var speed = calcSpeed([oldq.top, oldq.left], newq);
+
+        $target.animate({
+            top: newq[0],
+            left: newq[1]
+        }, speed, function() {
+            animateDiv($target);
+        });
+
+    };
+
+    function calcSpeed(prev, next) {
+
+        var x = Math.abs(prev[1] - next[1]);
+        var y = Math.abs(prev[0] - next[0]);
+
+        var greatest = x > y ? x : y;
+
+        var speedModifier = 0.1;
+
+        var speed = Math.ceil(greatest / speedModifier);
+
+        return speed;
+
+    }
+</script>
 
   </head>
   <body>
@@ -41,11 +92,13 @@ transform: rotate(20deg);
 <div style="
   position: absolute;
 <i class=" fa-solid="" fa-arrow-right"="">
-<p>height: 200px;
-border-radius: 40px;
-border: 5px solid #333;
-background: #008c3199;
-“&gt;</p></div><p></p>
+<div style="
+  position: absolute;
+  height: 200px;
+  border-radius: 40px;
+  border: 5px solid #333;
+  background: #008c3199;
+"></div>
 <div style="
   position: absolute;
   top: 400px;
@@ -55,7 +108,7 @@ background: #008c3199;
 ">
 <p><img src="try-hack.png" alt=""></p>
 </div>
-</section>
+</div></section>
 <section data-noprocess="" data-shortcode-slide="" data-background-image="https://danysk.github.io/slides-2023-dais-loadshift/test.gif" data-preload="true" data-transition="fade">
 <p><i class="fa-solid fa-arrow-right" style="
 color: #333;
@@ -866,10 +919,125 @@ with the entire code base rewritten from C++ to JavaScript</p>
 </ul>
 <h3 id="notable-platforms">Notable platforms</h3>
 <ul>
-<li><em>LLVM</em></li>
-<li><em>Kotlin</em></li>
-<li><em>Scala</em></li>
+<li><em>Scala</em> – through <em>Scala.js</em> and <em>Scala/Native</em></li>
+<li><em>Kotlin</em> – <em>integrated</em> multi-targeting for Javascript, JVM
+<ul>
+<li>Arguably, more solid toolchain</li>
 </ul>
+</li>
+</ul>
+</section>
+<section data-noprocess="" data-shortcode-slide="" data-background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png" data-preload="true" data-transition="slide">
+<h2 id="proof-of-concept">Proof of concept</h2>
+<h3 id="showcase-requirements">Showcase requirements</h3>
+<ul>
+<li>Use <em>incompatible platforms</em> for <strong>$\mathcal{N}$</strong> and <strong>$\mathcal{F}$</strong></li>
+<li>Emulate multiple devices and networked (non-trivial <strong>$\mathcal{H}$</strong>)</li>
+<li>Non-trivial workload moving across the incompatible platforms</li>
+</ul>
+<h3 id="nice-to-have">Nice to have</h3>
+<ul>
+<li>Software architecture allowing to <em>reuse</em> as much code as possible</li>
+<li>Large enough to make porting unfeasible</li>
+</ul>
+</section>
+<section data-noprocess="" data-shortcode-slide="" data-background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png" data-preload="true" data-transition="slide">
+<h2 id="proof-of-concept-target">Proof of concept: target</h2>
+<h3 id="img-srchttpsalchemistsimulatorgithubioimageslogosvg-altlogo-width33px-height0px-stylemargin-0-0-0-0-alchemisthttpsalchemistsimulatorgithubio"><img src="https://alchemistsimulator.github.io/images/logo.svg" alt="logo" width="33px" height="0px" style="margin: 0 0 0 0;"> <a href="https://alchemistsimulator.github.io/">Alchemist</a></h3>
+<video loop="" playsinline="" autoplay="" muted="" style="max-width: 100%; display: inline-block; ">
+  <source src="https://alchemistsimulator.github.io/home-animation.mp4" type="video/mp4">
+  If your browser supported the video tag, there would be a nice video.
+</video>
+<ul>
+<li>Simulator for <em>large-scale distributed systems</em>
+<ul>
+<li>Also presented in a <a href="https://link.springer.com/chapter/10.1007/978-3-030-78198-9_10">DAIS tutorial</a> in 2021</li>
+</ul>
+</li>
+<li><i class="fa-brands fa-java"></i> JVM-based (written in Java, Kotlin, and Scala)</li>
+</ul>
+</section>
+<section data-noprocess="" data-shortcode-slide="" data-background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png" data-preload="true" data-transition="slide">
+<h2 id="proof-of-concept-architecture">Proof of concept: architecture</h2>
+<p><img src="proof.svg" alt="POC architecture"></p>
+<table>
+<thead>
+<tr>
+<th><strong>Logical Component</strong></th>
+<th><strong>Alchemist Component</strong></th>
+<th><strong>Platform</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>$\mathcal{M}$</strong></td>
+<td>Simulator Model + <em>New serialization surrogates</em></td>
+<td><i class="fa-brands fa-java"></i> and <i class="fa-brands fa-square-js"></i></td>
+</tr>
+<tr>
+<td><strong>$\mathcal{F}$</strong></td>
+<td>Simulator Engine + <em>New server module</em></td>
+<td><i class="fa-brands fa-java"></i></td>
+</tr>
+<tr>
+<td><strong>$\mathcal{N}$</strong></td>
+<td>Browser</td>
+<td><i class="fa-brands fa-square-js"></i></td>
+</tr>
+<tr>
+<td><strong>$\mathcal{H}$</strong></td>
+<td><em>New rendering system</em></td>
+<td><i class="fa-brands fa-java"></i> and <i class="fa-brands fa-square-js"></i></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section data-noprocess="" data-shortcode-slide="" data-background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png" data-preload="true" data-transition="slide">
+<h2 id="proof-of-concept-design">Proof of concept: design</h2>
+<p><img src="component.svg" alt="POC architecture"></p>
+</section>
+<section data-noprocess="" data-shortcode-slide="" data-background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png" data-preload="true" data-transition="slide">
+<h2 id="proof-of-concept-demo">Proof of concept: demo</h2>
+<h3 id="curl--sl-httpsbitlydais-2023-loadshift--bash-"><code>curl -sL https://bit.ly/dais-2023-loadshift | bash </code></h3>
+<p><img src="client-snapshot.png" alt="running on N">
+<img src="server-snapshot.png" alt="running on F"></p>
+<p>Feel free to try it yourself :)</p>
+<p>Requirements: Java 8+, Internet connection, a browser, <code>curl</code>, and <code>bash</code></p>
+</section>
+<section data-noprocess="" data-shortcode-slide="" data-background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png" data-preload="true" data-transition="slide">
+<h2 id="proof-of-concept-performance-analysis">Proof of concept: performance analysis</h2>
+<p><img src="3.pdf.svg" alt="total time">
+<img src="0.pdf.svg" alt="serialization time">
+<img src="2.pdf.svg" alt="rendering time">
+<img src="1.pdf.svg" alt="deserialization time"></p>
+</section>
+<section data-noprocess="" data-shortcode-slide="" data-background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png" data-preload="true" data-transition="slide">
+<h2 id="conclusion">Conclusion</h2>
+<ul>
+<li>A <em>novel architecture</em> for <em>moving workloads across heterogeneous runtimes</em>
+<ol>
+<li>Isolate the heavy load part</li>
+<li>Identify the shared model and make it serializable</li>
+<li>Mediate all interactions through the heavy load part and the shared model</li>
+<li>Either write multiple ports of the heavy load, or <strong>much better</strong>, use a multi-target build process</li>
+</ol>
+</li>
+<li>The <em>Proof of concept</em> demonstrates feasibility</li>
+<li>The <em>Performance Analysis</em> suggests potentials benefits for heterogenuous systems and evolving contexts</li>
+</ul>
+<h2 id="img-srchamstergif-stylemargin-0-0-0-0-width100px-future-work-img-srchamstergif-stylemargin-0-0-0-0-width100px"><img src="hamster.gif" style="margin: 0 0 0 0;" width="100px"> Future work <img src="hamster.gif" style="margin: 0 0 0 0;" width="100px"></h2>
+<ul>
+<li>PoC integrated in the simulator, but <em>way</em> more work is needed to make it <em>usable</em></li>
+<li>Investigation of <em>autonomic dynamic load shift strategies</em></li>
+</ul>
+</section><section>
+<p>(question time <em>unofficially</em> supported by the mighty load-shift hamster)</p>
+<div class="traveling" style="
+  position: absolute;
+  margin: 0 0 0 0;
+">
+<p><img src="hamster.gif" alt=""></p>
+</div>
 </section>
 
   

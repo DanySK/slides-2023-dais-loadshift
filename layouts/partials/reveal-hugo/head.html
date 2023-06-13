@@ -1,6 +1,57 @@
 <!-- override this partial to add content before the head tag closes -->
-<link rel="stylesheet" href="https://gitcdn.link/repo/DanySK/css-blur-animation/master/blur.css">
 <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Oxygen Mono' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Ubuntu Mono' rel='stylesheet'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        animateDiv($('.traveling'));
+    });
+
+    function makeNewPosition($container) {
+
+        // Get viewport dimensions (remove the dimension of the div)
+        var h = $container.height() - 50;
+        var w = $container.width() - 50;
+
+        var nh = Math.floor(Math.random() * h);
+        var nw = Math.floor(Math.random() * w);
+
+        return [nh, nw];
+
+    }
+
+    function animateDiv($target) {
+        var newq = makeNewPosition($target.parent());
+        var oldq = $target.offset();
+        console.log("new " + newq);
+        console.log("old " + oldq.top + " " + oldq.left);
+        console.log($target)
+        var speed = calcSpeed([oldq.top, oldq.left], newq);
+
+        $target.animate({
+            top: newq[0],
+            left: newq[1]
+        }, speed, function() {
+            animateDiv($target);
+        });
+
+    };
+
+    function calcSpeed(prev, next) {
+
+        var x = Math.abs(prev[1] - next[1]);
+        var y = Math.abs(prev[0] - next[0]);
+
+        var greatest = x > y ? x : y;
+
+        var speedModifier = 0.1;
+
+        var speed = Math.ceil(greatest / speedModifier);
+
+        return speed;
+
+    }
+</script>

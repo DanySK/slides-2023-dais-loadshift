@@ -1316,9 +1316,19 @@ Requirements: Java 8+, Internet connection, a browser, `curl`, and `bash`
 * The *Proof of concept* demonstrates feasibility
 * The *Performance Analysis* suggests potentials benefits for heterogenuous systems and evolving contexts
 
-#
-#
-## Future work
+## <img src="hamster.gif" style="margin: 0 0 0 0;" width="100px"/> Future work <img src="hamster.gif" style="margin: 0 0 0 0;" width="100px"/>
 * PoC integrated in the simulator, but *way* more work is needed to make it *usable*
 * Investigation of *autonomic dynamic load shift strategies*
 
+---
+
+(question time *unofficially* supported by the mighty load-shift hamster)
+
+<div class="traveling" style="
+  position: absolute;
+  margin: 0 0 0 0;
+">
+
+![](hamster.gif)
+
+</div>

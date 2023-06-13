@@ -56,6 +56,8 @@ outputs = ["Reveal"]
   transform: rotate(20deg);
 "></i>
 
+<div style="
+  position: absolute;
   height: 200px;
   border-radius: 40px;
   border: 5px solid #333;

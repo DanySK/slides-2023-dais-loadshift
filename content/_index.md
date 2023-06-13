@@ -58,7 +58,10 @@ outputs = ["Reveal"]
 
 <div style="
   position: absolute;
+  width: 300px;
   height: 200px;
+  top: 220px;
+  left: 540px;
   border-radius: 40px;
   border: 5px solid #333;
   background: #008c3199;

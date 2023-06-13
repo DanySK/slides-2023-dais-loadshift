@@ -27,7 +27,7 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono');
 // @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono');
 
-// $backgroundColor: #fff;
+$backgroundColor: #555;
 
 // $mainColor: #000;
 // $headingColor: #111;
@@ -106,7 +106,7 @@ section.has-light-background {
 }
 
 .reveal ul {
-	margin: 0em .1em .1em .1em;
+	margin: 0em .1em em .1em;
 }
 
 .gist-it-gist .gist-file .gist-data pre, .gister-gist .gist-file .gist-data pre {

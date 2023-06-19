@@ -983,7 +983,13 @@ outputs = ["Reveal"]
 
 ## Analogies
 
-### Load balancing in cloud systems
+| **System** | **Similarity** | **Difference** |
+| --- | --- | --- |
+| *Load balancing in cloud systems* | shifts computational load to optimize performance | assumes *homogeneous* (cloud) devices |
+| *Mobile code* / *mobile agents* | computational load is designed to be moved across devices | available technologies assume a *shared runtime/middleware* |
+| *Cloud gaming* | capable to run the same heavy workload as a local application or as a bidirectional stream | does not loadshift at *runtime* (requires shutdown and restart) |
+
+<!-- ### Load balancing in cloud systems
 
 Tasks *allocated* to the available compute resources to optimise the performance
 
@@ -1041,6 +1047,8 @@ Games, however, **do not move** across runtimes, they are entirely different app
 Also, versions targeting different runtimes are typically **reimplementations** (costly realization and maintenance).
 
 #### Workloads must *move transparently to the user* and have *cheap realization and maintenance*
+
+-->
 
 ---
 

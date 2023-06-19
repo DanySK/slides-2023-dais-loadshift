@@ -766,35 +766,94 @@ transform: rotate(10deg);
 </section>
 <section data-noprocess="" data-shortcode-slide="" data-background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png" data-preload="true" data-transition="slide">
 <h2 id="analogies">Analogies</h2>
-<h3 id="load-balancing-in-cloud-systems">Load balancing in cloud systems</h3>
-<p>Tasks <em>allocated</em> to the available compute resources to optimise the performance</p>
-<p>It does not account for transferring load across <strong>heterogeneous</strong> devices:
-wordloads made for the cloud remain in the cloud</p>
-<h4 id="workloads-must-move-across-the-whole-edge-cloud-continuum">Workloads must <em>move across the whole edge-cloud continuum</em></h4>
-</section>
-<section data-noprocess="" data-shortcode-slide="" data-background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png" data-preload="true" data-transition="slide">
-<h2 id="analogies-1">Analogies</h2>
-<h3 id="mobile-code-and-mobile-agents">Mobile code and mobile agents</h3>
-<p>Workloads are <em>modeled</em> as <em>autonomous software entities</em> which can move across the network</p>
-<p>Typically, however, they require <strong>specific runtimes</strong> to be executed</p>
-<p>Mobile agents designed for the Java Virtual Machine do not run in a browser or in a microcontroller</p>
-<h4 id="workloads-must-move-across-different-runtimes">Workloads must <em>move across different runtimes</em></h4>
-</section>
-<section data-noprocess="" data-shortcode-slide="" data-background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png" data-preload="true" data-transition="slide">
-<h2 id="analogies-2">Analogies</h2>
-<h3 id="gaming-industry">Gaming industry</h3>
-<p>“AAA” Games are very resource-intensive and require expensive hardware:
-several players are thus offering <em>cloud gaming</em> services.</p>
-<p>Idea: <em>stream</em> the game to the player, and <em>stream back</em> the input
-(e.g., <i class="fa-brands fa-google"></i> Stadia, <i class="fa-brands fa-microsoft"></i> xCloud, <i class="fa-brands fa-amazon"></i> Luna, nVidia GeForce Now…).
-The same workload can thus, in principle, run in the cloud or on the end device.</p>
-<p>Moreover,
+<table>
+<thead>
+<tr>
+<th><strong>System</strong></th>
+<th><strong>Similarity</strong></th>
+<th><strong>Difference</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Load balancing in cloud systems</em></td>
+<td>shifts computational load to optimize performance</td>
+<td>assumes <em>homogeneous</em> (cloud) devices</td>
+</tr>
+<tr>
+<td><em>Mobile code</em> / <em>mobile agents</em></td>
+<td>computational load is designed to be moved across devices</td>
+<td>available technologies assume a <em>shared runtime/middleware</em></td>
+</tr>
+<tr>
+<td><em>Cloud gaming</em></td>
+<td>capable to run the same heavy workload as a local application or as a bidirectional stream</td>
+<td>does not loadshift at <em>runtime</em> (requires shutdown and restart)</td>
+</tr>
+</tbody>
+</table>
+<!-- ### Load balancing in cloud systems
+
+Tasks *allocated* to the available compute resources to optimise the performance
+
+It does not account for transferring load across **heterogeneous** devices:
+wordloads made for the cloud remain in the cloud
+
+#### Workloads must *move across the whole edge-cloud continuum*
+
+---
+
+
+<section data-noprocess data-shortcode-slide
+        data-background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png"
+        data-preload="true"
+        data-transition="slide">
+  
+
+## Analogies
+
+### Mobile code and mobile agents
+
+Workloads are *modeled* as *autonomous software entities* which can move across the network
+
+Typically, however, they require **specific runtimes** to be executed
+
+Mobile agents designed for the Java Virtual Machine do not run in a browser or in a microcontroller
+
+#### Workloads must *move across different runtimes*
+
+---
+
+
+<section data-noprocess data-shortcode-slide
+        data-background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png"
+        data-preload="true"
+        data-transition="slide">
+  
+
+## Analogies
+
+### Gaming industry
+
+"AAA" Games are very resource-intensive and require expensive hardware:
+several players are thus offering *cloud gaming* services.
+
+Idea: *stream* the game to the player, and *stream back* the input
+(e.g., <i class="fa-brands fa-google"></i> Stadia, <i class="fa-brands fa-microsoft"></i> xCloud, <i class="fa-brands fa-amazon"></i> Luna, nVidia GeForce Now...).
+The same workload can thus, in principle, run in the cloud or on the end device.
+
+Moreover,
 some games have been demonstrated to run inside a web browser:
-porting on <em>different runtimes</em> is possible in principle
-(e.g., Quake JS).</p>
-<p>Games, however, <strong>do not move</strong> across runtimes, they are entirely different applications that need to be <strong>manually restarted</strong>.</p>
-<p>Also, versions targeting different runtimes are typically <strong>reimplementations</strong> (costly realization and maintenance).</p>
-<h4 id="workloads-must-move-transparently-to-the-user-and-have-cheap-realization-and-maintenance">Workloads must <em>move transparently to the user</em> and have <em>cheap realization and maintenance</em></h4>
+porting on *different runtimes* is possible in principle
+(e.g., Quake JS).
+
+Games, however, **do not move** across runtimes, they are entirely different applications that need to be **manually restarted**.
+
+Also, versions targeting different runtimes are typically **reimplementations** (costly realization and maintenance).
+
+#### Workloads must *move transparently to the user* and have *cheap realization and maintenance*
+
+-->
 </section>
 <section data-noprocess="" data-shortcode-slide="" data-background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png" data-preload="true" data-transition="slide">
 <h2 id="abstract-architecture">Abstract architecture</h2>

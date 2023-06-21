@@ -914,87 +914,113 @@ this is the component that <em>can be executed and moved on either <strong>$\mat
 </li>
 <li><em>Harder to implement</em></li>
 <li>Potentially <em>inferior reactivity</em> as only commands and state travel over the network</li>
-<li><em>Wastes resources</em> to keep a copy of <strong>$\mathcal{H}$</strong> on all devices</li>
 </ul>
 </section>
 <section data-noprocess="" data-shortcode-slide="" data-background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png" data-preload="true" data-transition="slide">
 <h2 id="portability">Portability</h2>
-<p><strong>$\mathcal{H}$</strong> must be able to run as a module of <strong>$\mathcal{N}$</strong> and <strong>$\mathcal{F}$</strong><br>
-but <em>we did not impose any constraint on the runtime or technology</em></p>
-<h3 id="shared-technologyruntime">Shared technology/runtime</h3>
-<ul>
-<li><strong>$\mathcal{N}$</strong> and <strong>$\mathcal{F}$</strong> <em>share a runtime</em>
-<ul>
-<li>they can be written in <em>different languages</em> as far as their <em>executable</em> form is <em>portable</em></li>
-</ul>
-</li>
-<li>The proposed architecture is a <em>complicating overkill</em> in this case
-<ul>
-<li>Many ready-to-use solutions from the literature</li>
-</ul>
-</li>
-</ul>
-<h3 id="incompatible-runtimes">Incompatible runtimes</h3>
-<ul>
-<li><strong>$\mathcal{N}$</strong> and <strong>$\mathcal{F}$</strong> are based on <em>incompatible runtimes</em> (e.g., <strong>$\mathcal{F}$</strong> runs in the JVM, <strong>$\mathcal{N}$</strong> in the browser)</li>
-<li>Two macro-strategies:
-<ul>
-<li><em>Porting</em> <strong>$\mathcal{H}$</strong> to each runtime</li>
-<li><em>Multi-targeting</em> <strong>$\mathcal{H}$</strong> to multiple runtimes</li>
-</ul>
-</li>
-</ul>
-</section>
-<section data-noprocess="" data-shortcode-slide="" data-background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png" data-preload="true" data-transition="slide">
-<h2 id="porting">Porting</h2>
-<p><em>Rewrite</em> the <em>whole application</em> for <em>each runtime</em></p>
-<ul>
-<li>
-<p><em>Expensive</em> and <em>error-prone</em></p>
-</li>
-<li>
-<p><em>Hard to maintain</em> as the code base is <em>duplicated</em> and avoiding <em>divergence</em> is a hard problem</p>
-</li>
-<li>
-<p>Adopted in some notable cases, e.g., ioquake 3 is a <em>port</em> of Quake 3 Arena to the browser
-with the entire code base rewritten from C++ to JavaScript</p>
-</li>
-</ul>
-<img src="https://global.discourse-cdn.com/standard14/uploads/ioquake/original/1X/9f34c23d7f1e457ea07f366b194e73792b0f45cd.jpeg" width="500">
-<p>(notably, the last stable version of the original id Tech 3 engine has been released in 2005)</p>
-</section>
-<section data-noprocess="" data-shortcode-slide="" data-background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png" data-preload="true" data-transition="slide">
-<h2 id="multi-targeting">Multi-targeting</h2>
-<p><em>Offload</em> the task to generate executables for multiple runtimes to a <em>multi-target build process</em> generating <em>multiple executables</em></p>
-<ul>
-<li><em>Simple</em> at least on paper</li>
-<li><em>Limited choice of technologies</em>
-<ul>
-<li>The more the target runtimes, the fewer the available technologies</li>
-</ul>
-</li>
-<li>No shared runtime $\Rightarrow$ <em>No shared libraries!</em>
-<ul>
-<li>Host language and tooling must provide ways to abstract over the differences and pick the right one</li>
-</ul>
-</li>
-</ul>
-<h3 id="notable-platforms">Notable platforms</h3>
-<ul>
-<li><em>Scala</em> – through <em>Scala.js</em> and <em>Scala/Native</em></li>
-<li><em>Kotlin</em> – <em>integrated</em> multi-targeting for Javascript, JVM
-<ul>
-<li>Arguably, more solid toolchain</li>
-</ul>
-</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Approach</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Shared tech/runtime</em></td>
+<td>Portability guaranteed by the runtime</td>
+<td>Portability limited to the portability of the runtime</td>
+<td>No need of this architecture (becomes an overkill)</td>
+</tr>
+<tr>
+<td><em>Porting</em></td>
+<td>Each implementation can be optimized</td>
+<td>Expensive development, expensive maintenance, error-prone, duplication</td>
+<td>Notable examples exist, such as ioquake 3</td>
+</tr>
+<tr>
+<td><em>Multi-targeting</em></td>
+<td>Single codebase as in the shared runtime</td>
+<td>More complex build process, few technologies</td>
+<td>Kotlin and Scala viable solutions</td>
+</tr>
+</tbody>
+</table>
+<!-- 
+**$\mathcal{H}$** must be able to run as a module of **$\mathcal{N}$** and **$\mathcal{F}$**<br>
+but *we did not impose any constraint on the runtime or technology*
+
+### Shared technology/runtime
+* **$\mathcal{N}$** and **$\mathcal{F}$** *share a runtime*
+  * they can be written in *different languages* as far as their *executable* form is *portable*
+* The proposed architecture is a *complicating overkill* in this case
+  * Many ready-to-use solutions from the literature
+
+### Incompatible runtimes
+
+* **$\mathcal{N}$** and **$\mathcal{F}$** are based on *incompatible runtimes* (e.g., **$\mathcal{F}$** runs in the JVM, **$\mathcal{N}$** in the browser)
+* Two macro-strategies:
+  * *Porting* **$\mathcal{H}$** to each runtime
+  * *Multi-targeting* **$\mathcal{H}$** to multiple runtimes
+
+---
+
+
+<section data-noprocess data-shortcode-slide
+        data-background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png"
+        data-preload="true"
+        data-transition="slide">
+  
+
+## Porting
+
+*Rewrite* the *whole application* for *each runtime*
+
+* *Expensive* and *error-prone*
+* *Hard to maintain* as the code base is *duplicated* and avoiding *divergence* is a hard problem
+
+* Adopted in some notable cases, e.g., ioquake 3 is a *port* of Quake 3 Arena to the browser
+with the entire code base rewritten from C++ to JavaScript
+
+<img src="https://global.discourse-cdn.com/standard14/uploads/ioquake/original/1X/9f34c23d7f1e457ea07f366b194e73792b0f45cd.jpeg" width="500" >
+
+(notably, the last stable version of the original id Tech 3 engine has been released in 2005)
+
+---
+
+
+<section data-noprocess data-shortcode-slide
+        data-background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png"
+        data-preload="true"
+        data-transition="slide">
+  
+
+## Multi-targeting
+
+*Offload* the task to generate executables for multiple runtimes to a *multi-target build process* generating *multiple executables*
+
+* *Simple* at least on paper
+* *Limited choice of technologies*
+  * The more the target runtimes, the fewer the available technologies
+* No shared runtime $\Rightarrow$ *No shared libraries!*
+  * Host language and tooling must provide ways to abstract over the differences and pick the right one
+
+### Notable platforms
+
+* *Scala* -- through *Scala.js* and *Scala/Native*
+* *Kotlin* -- *integrated* multi-targeting for Javascript, JVM
+  * Arguably, more solid toolchain
+
+-->
 </section>
 <section data-noprocess="" data-shortcode-slide="" data-background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png" data-preload="true" data-transition="slide">
 <h2 id="proof-of-concept">Proof of concept</h2>
 <h3 id="showcase-requirements">Showcase requirements</h3>
 <ul>
 <li>Use <em>incompatible platforms</em> for <strong>$\mathcal{N}$</strong> and <strong>$\mathcal{F}$</strong></li>
-<li>Emulate multiple devices and networked (non-trivial <strong>$\mathcal{H}$</strong>)</li>
+<li>Emulate multiple networked devices (non-trivial <strong>$\mathcal{H}$</strong>)</li>
 <li>Non-trivial workload moving across the incompatible platforms</li>
 </ul>
 <h3 id="nice-to-have">Nice to have</h3>
@@ -1006,7 +1032,7 @@ with the entire code base rewritten from C++ to JavaScript</p>
 <section data-noprocess="" data-shortcode-slide="" data-background-image="https://raw.githubusercontent.com/DanySK/shared-slides/6824b93d3d52b841386a744f57953a73ccb67378/backgrounds/dark-net-dots.png" data-preload="true" data-transition="slide">
 <h2 id="proof-of-concept-target">Proof of concept: target</h2>
 <h3 id="img-srchttpsalchemistsimulatorgithubioimageslogosvg-altlogo-width33px-height0px-stylemargin-0-0-0-0-alchemisthttpsalchemistsimulatorgithubio"><img src="https://alchemistsimulator.github.io/images/logo.svg" alt="logo" width="33px" height="0px" style="margin: 0 0 0 0;"> <a href="https://alchemistsimulator.github.io/">Alchemist</a></h3>
-<video loop="" playsinline="" autoplay="" muted="" style="max-width: 100%; display: inline-block; ">
+<video loop="" playsinline="" autoplay="true" muted="" style="max-width: 100%; display: inline-block; ">
   <source src="https://alchemistsimulator.github.io/home-animation.mp4" type="video/mp4">
   If your browser supported the video tag, there would be a nice video.
 </video>

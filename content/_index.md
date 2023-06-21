@@ -1128,7 +1128,6 @@ In short, the architecture struggles to *isolate* and *minimize* the part of cod
   * How to preserve the integrity of the ongoing operation is an open problem though
 * *Harder to implement*
 * Potentially *inferior reactivity* as only commands and state travel over the network
-* *Wastes resources* to keep a copy of **$\mathcal{H}$** on all devices
 
 ---
 
@@ -1140,6 +1139,13 @@ In short, the architecture struggles to *isolate* and *minimize* the part of cod
 
 ## Portability
 
+| **Approach** | **Pros** | **Cons** | **Notes** |
+| --- | --- | --- | --- |
+| *Shared tech/runtime* | Portability guaranteed by the runtime | Portability limited to the portability of the runtime | No need of this architecture (becomes an overkill) |
+| *Porting* | Each implementation can be optimized | Expensive development, expensive maintenance, error-prone, duplication | Notable examples exist, such as ioquake 3 |
+| *Multi-targeting* | Single codebase as in the shared runtime | More complex build process, few technologies | Kotlin and Scala viable solutions |
+
+<!-- 
 **$\mathcal{H}$** must be able to run as a module of **$\mathcal{N}$** and **$\mathcal{F}$**<br>
 but *we did not impose any constraint on the runtime or technology*
 
@@ -1202,6 +1208,8 @@ with the entire code base rewritten from C++ to JavaScript
 * *Kotlin* -- *integrated* multi-targeting for Javascript, JVM
   * Arguably, more solid toolchain
 
+-->
+
 ---
 
 {{%
@@ -1214,7 +1222,7 @@ with the entire code base rewritten from C++ to JavaScript
 
 ### Showcase requirements
 * Use *incompatible platforms* for **$\mathcal{N}$** and **$\mathcal{F}$**
-* Emulate multiple devices and networked (non-trivial **$\mathcal{H}$**)
+* Emulate multiple networked devices (non-trivial **$\mathcal{H}$**)
 * Non-trivial workload moving across the incompatible platforms
 
 ### Nice to have
@@ -1233,7 +1241,7 @@ with the entire code base rewritten from C++ to JavaScript
 
 ### <img src="https://alchemistsimulator.github.io/images/logo.svg" alt="logo" width="33px" height="0px" style="margin: 0 0 0 0;"/> [Alchemist](https://alchemistsimulator.github.io/)
 
-<video loop="" playsinline="" autoplay="" muted="" style="max-width: 100%; display: inline-block; ">
+<video loop="" playsinline="" autoplay="true" muted="" style="max-width: 100%; display: inline-block; ">
   <source src="https://alchemistsimulator.github.io/home-animation.mp4" type="video/mp4">
   If your browser supported the video tag, there would be a nice video.
 </video>
